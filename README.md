@@ -1,4 +1,4 @@
-# CLASS/STATIC PROPERTIES
+# CLASS/STATIC PROPERTIES & METHODS
 
 ## INTRODUCTION [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)
 
@@ -44,4 +44,46 @@ calcTax();
 }
 ```
 
-Because this method is static, it can only be accessed using the class name which in this case is `Economy`.
+Because this method is static, it can only be accessed using the class name which in this case is `Economy`. Thus,
+
+```js
+class Economy {
+  constructor(salary) {
+    this.salary = salary;
+  }
+
+
+ static calcTax() {
+    // conditions and output
+    // conditions and output
+  }
+
+
+//   calling the method
+Economy.calcTax();
+}
+
+```
+
+With regards to static properties, they are also declared using the static keyword. Example,
+
+```js
+class Fund {
+  static initialMoney = 0;
+}
+```
+
+We have defined a static property of the class Fund with a name `initialMoney`. To access it, we use the class name.
+
+```js
+class Fund {
+  static initialMoney = 0;
+}
+Fund.initialMoney += 100;
+
+// The prop initialMoney was set to 0 and made to increase by 100 for addition.
+```
+
+The code in this repository just shows ways of declaring and accessing static properties and methods.
+
+Thank you !
